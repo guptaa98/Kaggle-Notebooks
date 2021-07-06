@@ -12,8 +12,9 @@ The aim of this task is to predict the stock market prices for 5 stocks.
 Certificate - https://dockship.io/certificates/6005b5f2aaf1695ff537ad36
 
 # 4. Titanic Kaggle.ipynb
-The aim of this task was to predict if a person would survive on Titanic or not. The attributes are PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin and Embarked. The feature among these to be predicted is Survived.                                                                                                           
-Accuracy - 77.033%
+The aim of this task was to predict if a person would survive on Titanic or not. The attributes are PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin and Embarked. The feature among these to be predicted is Survived. 
+Algorithms used - K-NN, Logistic Regression, SVM
+Accuracy - 77.5%
 
 # 5. Amazon_Product_Review.ipynb
 It is a subset of a large 142.8 million Amazon review dataset that was made available by Stanford professor, Julian McAuley. This sentiment analysis dataset contains reviews from May 1996 to July 2014. The dataset reviews include ratings, text, helpful votes, product description, category information, price, brand, and image features. 
