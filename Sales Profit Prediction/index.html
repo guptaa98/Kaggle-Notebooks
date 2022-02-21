@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Maximum Profit earned by a company</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="number" name="region" placeholder="Region" required="required" />
+        <input type="number" name="Country" placeholder="Country" required="required" />
+        <input type="number" name="Item Type" placeholder="Item Type" required="required" />
+        <input type="number" name="Sales Channel" placeholder="Sales Channel" required="required" />
+        <input type="number" name="Order Priority" placeholder="Order Priority" required="required" />
+        <input type="number" name="Unit Sold" placeholder="Unit Sold" required="required" />
+        <input type="number" name="Unit Price" placeholder="Unit Price" required="required" />
+        <input type="number" name="Unit Cost" placeholder="Unit Cost" required="required" />
+        <input type="number" name="Total Revenue" placeholder="Total Revenue" required="required" />
+        <input type="number" name="Total Cost" placeholder="Total Cost" required="required" />
+        <input type="number" name="Order Year" placeholder="Order Year" required="required" />
+        <input type="number" name="Order Month" placeholder="Order Month" required="required" />
+        <input type="number" name="Order Date" placeholder="Order Date" required="required" />
+        <input type="number" name="Ship Year" placeholder="Ship Year" required="required" />
+        <input type="number" name="Ship Month" placeholder="Ship Month" required="required" />
+        <input type="number" name="Ship Date" placeholder="Ship Date" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
