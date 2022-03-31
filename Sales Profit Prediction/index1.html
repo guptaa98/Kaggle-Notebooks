@@ -14,7 +14,16 @@
             <h2>Predict Maximum Profit earned by the company</h2>
             
             <h3>Region</h3> 
-                <input id="first" name="Region" type="number",required="required">
+                <!-- <input id="first" name="Region" type="number",required="required"> -->
+                <select name = 'Region', required="required">
+                    <option value='Sub-Saharan Africa'>Sub-Saharan Africa</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Middle East and North Africa">Middle East and North Africa</option>
+                    <option value="Central America and the Caribbean">Central America and the Caribbean</option> 
+                    <option value="Australia and Oceania">Australia and Oceania</option>            
+                    <option value="North America">North America</option> 
+                </select>
             <h3>Country </h3>
                 <!-- <input id="second" name="Country" required="required", type="text"> -->
                 <select name = 'Country', required='required'>
@@ -191,14 +200,33 @@
                     <option value='Zimbabwe'>Zimbabwe</option>
                 </select>
             <h3>Item Type</h3>
-                <input id="third" name="Item type" required="required">
+                <!-- <input id="third" name="Item type" required="required"> -->
+                <select name = "Item Type">
+                    <option value="Fruits">Fruits</option>
+                    <option value= "Meat">Meat</option>               
+                    <option value="Cosmetics">Cosmetics</option>          
+                    <option value ="Vegetables">Vegetables</option>         
+                    <option value="Personal Care">Personal Care</option>      
+                    <option value="Beverages">Beverages</option>         
+                    <option value = "Snacks">Snacks</option>            
+                    <option value="Clothes">Clothes</option>           
+                    <option value="Cereal">Cereal</option>             
+                    <option value="Household">Household</option>          
+                    <option value="Office Supplies">Office Supplies</option>    
+                    <option value="Baby Food">Baby Food</option>
+                </select>
             <h3>Sales Channel</h3>
-                <input id="fourth" name="Sales Channel" required="required">
+                <!-- <input id="fourth" name="Sales Channel" required="required"> -->
+                <select name = 'Sales Channel',required='required'>
+                    <option value="Online">Online</option>
+                    <option value="Offline">Offline</option>
+                </select>
             <h3>Order Priority</h3>
                 <select name="Order Priority" required="required">
+                    <option value="C">Critical</option>
                     <option value="H">High</option>
-                    <option value="L">Low</option>
                     <option value="M">Medium</option>
+                    <option value="L">Low</option>
                 </select>
             <h3>Units Sold</h3>
                 <input id="fourth" name="Units Sold" required="required">
