@@ -9,13 +9,13 @@
 
 <body>
 
-    <div style="color:blue">
+    <div style="color:black">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predict Maximum Profit earned by the company</h2>
+            <h1 style="color:black" id="font">PREDICTION OF MAXIMUM PROFIT EARNED</h1>
             
             <h3>Region</h3> 
                 <!-- <input id="first" name="Region" type="number",required="required"> -->
-                <select name = 'Region', required="required">
+                <select name = 'Region', required="required" id="fourth">
                     <option value='Sub-Saharan Africa'>Sub-Saharan Africa</option>
                     <option value="Europe">Europe</option>
                     <option value="Asia">Asia</option>
@@ -26,7 +26,7 @@
                 </select>
             <h3>Country </h3>
                 <!-- <input id="second" name="Country" required="required", type="text"> -->
-                <select name = 'Country', required='required'>
+                <select name = 'Country', required='required' id="fourth">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Albania">Albania</option> <option value="Algeria">Algeria</option>  
                     <option value="Andorra">Andorra</option> <option value="Angola">Angola</option>
@@ -201,7 +201,7 @@
                 </select>
             <h3>Item Type</h3>
                 <!-- <input id="third" name="Item type" required="required"> -->
-                <select name = "Item Type">
+                <select name = "Item Type" id="fourth">
                     <option value="Fruits">Fruits</option>
                     <option value= "Meat">Meat</option>               
                     <option value="Cosmetics">Cosmetics</option>          
@@ -217,12 +217,12 @@
                 </select>
             <h3>Sales Channel</h3>
                 <!-- <input id="fourth" name="Sales Channel" required="required"> -->
-                <select name = 'Sales Channel',required='required'>
+                <select name = 'Sales Channel',required='required' id="fourth">
                     <option value="Online">Online</option>
                     <option value="Offline">Offline</option>
                 </select>
             <h3>Order Priority</h3>
-                <select name="Order Priority" required="required">
+                <select name="Order Priority" required="required" id="fourth">
                     <option value="C">Critical</option>
                     <option value="H">High</option>
                     <option value="M">Medium</option>
@@ -251,7 +251,7 @@
             <h3>Ship Date</h3>
                 <input id="fourth" name="Ship Date_day" required="required">
 
-            <br><br><button id="sub" type="submit ">Calculate the Profit</button>
+            <br><br><button class="sub" type="submit"> Profit</button>
             <br>
         </form>
         <br><h3>{{ prediction_text }}<h3>
@@ -262,110 +262,41 @@
 
     <style>
         body {
-            background-color: lightslategray;
+            background-image: linear-gradient(to bottom  ,white, rgb(238, 225, 130),white);
             text-align: center;
             padding: 0px;
-        }
-        
-        #research {
-            font-size: 18px;
-            width: 100px;
-            height: 23px;
-            top: 23px;
-        }
-        
-        #box {
-            border-radius: 60px;
-            border-color: 45px;
-            border-style: solid;
-            font-family: cursive;
-            text-align: center;
-            background-color: rgb(168, 131, 61);
-            font-size: medium;
-            position: absolute;
-            width: 700px;
-            bottom: 9%;
-            height: 850px;
-            right: 30%;
-            padding: 0px;
-            margin: 0px;
-            font-size: 14px;
-        }
-        
-        #fuel {
-            width: 83px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 20px;
-        }
-        
-        #fuel:hover {
-            background-color: coral;
-        }
-        
-        #research {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #research:hover {
-            background-color: coral;
-        }
-        
-        #resea {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #resea:hover {
-            background-color: coral;
-        }
-        
-        #sub {
-            width: 120px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #sub:hover {
-            background-color: darkcyan;
-        }
-        
-        #first {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #second {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #third {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
         }
         
         #fourth {
             border-radius: 14px;
             height: 25px;
-            font-size: 20px;
+            font-size: 15px;
             text-align: center;
+            background-color: bisque;
+        }
+        #font {
+            font-family: cursive, Geneva, Helvetica, sans-serif;
+
+        }
+        .sub{
+            background: burlywood;
+            color: black;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px #eee;
+            text-shadow: none;
+            height: 50px;
+            width: 100px;   
+        }
+        .sub:hover{
+            background: brown;
+            color: #fff;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px #eee;
+            text-shadow: none;
+            height: 50px;
+            width: 100px;
         }
     </style>
 </body>

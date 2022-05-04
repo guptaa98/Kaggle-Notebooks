@@ -48,23 +48,8 @@ def predict():
         features[2] = Item_Type_dict[features[2]]
         features[3] = Sales_Channel_dict[features[3]]
 
-        # if(features[4] == 'H'):
-        #     features[4] = 3
-        # else:
-        #     if(features[4] == 'M'):
-        #         features[4] = 2
-        #     else:
-        #         features[4] = 1
-         
-        
-        # print(features)
-        # for i in range(len(features)):
-        #     if(i==1):
-        #         continue
-        #     else:
-        #         features[i] = scaler.transform([features[i]])
-        features = scaler.transform([features])
 
+        features = scaler.transform([features])
 
         print(features)
         final_features = [np.array(features[0])]
@@ -72,7 +57,6 @@ def predict():
         
         output = round(prediction[0], 2)
    
-        #my_prediction = model.predict(data_pad)
         print (output)
         return render_template('index1.html', prediction_text=' {}'.format(output))
 
